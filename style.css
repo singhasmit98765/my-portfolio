@@ -1,0 +1,284 @@
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1120;
+    color: #f1f5f9;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #111a2e;
+}
+
+.logo {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #f1f5f9;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* Home section */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 8%;
+}
+
+.intro {
+    color: #60a5fa;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin: 10px 0;
+}
+
+.hero h2 {
+    color: #60a5fa;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    max-width: 600px;
+}
+
+.btn {
+    margin-top: 24px;
+    padding: 12px 24px;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* General sections */
+.section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 24px;
+    color: #60a5fa;
+}
+
+.section > p {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.skills-list span {
+    background-color: #1e293b;
+    padding: 10px 22px;
+    border-radius: 6px;
+}
+
+/* Project cards */
+.project-card {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 24px;
+    background-color: #111a2e;
+    border: 1px solid #263550;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #60a5fa;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #111a2e;
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+/* Hero section layout */
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero .intro {
+    color: #60a5fa;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero .description {
+    color: #cbd5e1;
+    margin-top: 16px;
+    max-width: 520px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.hero .btn {
+    margin-top: 0;
+}
+
+.btn-outline {
+    background: transparent !important;
+    border: 1px solid #60a5fa;
+}
+
+.hero-image {
+    flex: 0 1 300px;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #60a5fa;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    #home {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .hero-image {
+        width: 180px;
+        flex-basis: auto;
+        align-self: center;
+    }
+}
+
+.section-description {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.project-card {
+    background: #111a2e;
+    border: 1px solid #263550;
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #60a5fa;
+}
+
+.project-type {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.project-card h3 {
+    margin-bottom: 12px;
+}
+
+.project-card > p:not(.project-type) {
+    color: #cbd5e1;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.tech-stack span {
+    background: #1e293b;
+    color: #93c5fd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
